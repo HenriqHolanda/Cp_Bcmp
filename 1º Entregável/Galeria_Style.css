@@ -1,0 +1,31 @@
+/* Este é um comentário em CSS */
+/* CSS atribuido a classe galeria */
+
+
+.Galeria {
+
+/* Borda do elemento pai */
+border: 4px solid black;
+
+/*Aplicando o flex*/
+display: flex;
+
+/*Aplicando o flex ele coloca em linha as fileiras, porém como queremos que as fileiras fiquem em uma coluna, muda-se o flex direction.*/
+flex-direction: column;
+
+}
+
+.Fileira {
+display: flex;
+/*O justify content é usado para alinhar horizontalmente os elementos da div*/
+justify-content: space-around;
+
+/*Esses paddings são apenas para criar um espaçamento entre as fileiras e entre a fileira e a borda do elemento pai*/
+/*É o caso usar o inspecionar elemento sempre quando for colocar algum padding pra ter noção de como o site está mudando*/
+padding-bottom: 20px;
+padding-top: 20px;
+}
+
+.Fileira img{
+    border: 4px solid white
+}
