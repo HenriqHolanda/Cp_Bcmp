@@ -1,0 +1,122 @@
+/*Fazendo com que a div container ocupe o body todo*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*Organização em grid da header, nav, main, footer*/ /*Note que a main ocupa mais de 100% da tela*/
+.Container{
+    display: grid;
+    grid-template-rows: 12% 5% 180% 10%;
+    height: 100%;
+    width: 100%;
+}
+
+/*Texto centralizado e com a fonte dos requisitos*/
+header{
+    background-color: #2dc8f9;
+    font-family: 'Inlanders', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*Truque para colocar o gradiente no texto, aplica-se color transparente e posteriormente o gradiente em background-image*/
+header p{
+    color: transparent; /* Torna o texto transparente */
+    /* Aplicando o gradiente como plano de fundo do texto */
+    background-image: repeating-linear-gradient(to bottom, #0a96d7 0%, #115cb7 50%, #115cb7 50%, #0a96d7 100%); /* Substitua as cores pelo gradiente desejado */
+    background-clip: text; /* Define a área de recorte para o texto */
+    font-size: 65px;
+    -webkit-text-stroke: 3px #FFF
+
+}
+
+/*texto organizado em flex com a fonte dos requisitos*/
+nav{
+    background-color: #016caa;
+    font-family: 'Play Pretend', sans-serif;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav p{
+    font-size: 18px;
+    color: rgb(235, 233, 233);
+}
+
+/*hover pedido nos requisitos*/
+nav p:hover{
+    color: orange;
+}
+
+/*Organização da loja em 3 colunas pelo grid, gap entre os elementos e o padding para dar uma distância*/
+main{
+    background-color: rgb(198, 208, 208);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 100px;
+    padding: 20px;
+}
+
+.product h2{
+    font-family: "Sansita One", sans-serif;
+    color: #016caa;
+    text-align: center;
+}
+
+/*Organização do card com foto e descrição utilizando o flex*/
+.product_card{
+    background-color:white;
+    height: 250px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.product_card img{
+    width: 150px;
+    height: 180px;
+}
+
+/*Botão do mesmo jeito que foi mostrado na aula do YT*/
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #016caa;
+    text-align: center;
+    font-family: "Sansita One", sans-serif;
+    color: white;
+    height: 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+/*hover que foi mostrado no vídeo*/
+.btn:hover{
+    background-color: #065b8c;
+}
+
+/*Footer com o mesmo alinhamento da header*/
+footer{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    color: #FFF;
+    font-size: 25px;
+}
+
